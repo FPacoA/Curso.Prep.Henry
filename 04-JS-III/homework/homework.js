@@ -3,18 +3,22 @@
 function devolverPrimerElemento(array) {
   // Devuelve el primer elemento de un array
   // Tu código:
+ 
+  console.log(devolverPrimerElemento[0]);
 }
 
 
 function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
   // Tu código:
+  console.log(devolverPrimerElemento[devolverPrimerElemento.length-1]);
 }
 
 
 function obtenerLargoDelArray(array) {
   // Devuelve el largo de un array
   // Tu código:
+  array.length;
 }
 
 
@@ -23,13 +27,17 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
-}
+  for(let i=0; i<array.length; i++){array[i]= array[i]+1}
+  return array
+ }
 
 
 function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
+  agregarItemAlFinalDelArray.push("elemento")
+  console.log (agregarItemAlFinalDelArray);
 }
 
 
@@ -38,6 +46,8 @@ function agregarItemAlComienzoDelArray(array, elemento) {
   // y devuelve el array
   // Pista: usa el método `.unshift`
   // Tu código:
+  agregarItemAlComienzoDelArray.unshift("elemento")
+  console.log(agregarItemAlComienzoDelArray);
 }
 
 
@@ -46,7 +56,12 @@ function dePalabrasAFrase(palabras) {
   // Devuelve un string donde todas las palabras estén concatenadas
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
-  // Tu código:
+  // Tu código: 
+var dePalabrasAFrase = ""
+while (!(palabras.length === 1)){
+dePalabrasAFrase = dePalabrasAFrase + (palabras.shift() + " ")
+}  dePalabrasAFrase = dePalabrasAFrase + palabras.shift()
+ return dePalabrasAFrase
 }
 
 
@@ -54,6 +69,12 @@ function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
+  for (let i=0; i < array.length; i++){
+  if ( array[i] === elemento){
+  return true}
+  }
+  return false
+  
 }
 
 
@@ -61,6 +82,12 @@ function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
+  
+var IncrementoMatriz = 0
+while (!(numeros.length === 1)){
+IncrementoMatriz = IncrementoMatriz + numeros.shift()
+}  IncrementoMatriz = IncrementoMatriz + numeros.shift()
+ return IncrementoMatriz
 }
 
 
@@ -68,6 +95,12 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
+var ResultadosPro = resultadosTest.length
+  var IncrementoMatriz = 0
+while (!(resultadosTest.length === 1)){
+IncrementoMatriz = IncrementoMatriz + resultadosTest.shift()
+}  IncrementoMatriz = IncrementoMatriz + resultadosTest.shift()
+  return IncrementoMatriz / ResultadosPro
 }
 
 
@@ -75,6 +108,13 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
+  for (let x of array) { var comparacion=[]
+    for (let i=0; i<array.length; i++) {
+    comparacion.push(x>=array[i])
+    }                 
+  if (!arrayContiene(comparacion,false)){ return x
+}
+}
 }
 
 
@@ -178,3 +218,11 @@ module.exports = {
   breakStatement,
   continueStatement
 };
+
+
+//var IncrementoMatriz = 0
+//while (!(array.length === 1)){
+//IncrementoMatriz = IncrementoMatriz + palabras.shift()
+//}  IncrementoMatriz = IncrementoMatriz + palabras.shift()
+// return IncrementoMatriz
+//}
